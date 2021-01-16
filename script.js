@@ -37,40 +37,17 @@ document.querySelector('.check').addEventListener('click', function () {
       hightScore = score;
       document.querySelector('.highscore').textContent = hightScore;
     }
-
-    // When guess is wrong
-    if (guess !== secretNumber) {
-      if (score > 1) {
-        document.querySelector('.message').textContent = guess > secretNumber ? '📉 Too Hight' : '📈 Too Low ';
-        score--;
-        document.querySelector('.score').textContent = score;
-      } else {
-        document.querySelector('.message').textContent = 'You Lost the game ';
-        document.querySelector('.score').textContent = 0;
-      }
-    }
-
     
-//     // When guess is too Hight
-//   } else if (guess > secretNumber) {
-//     if (score > 1) {
-//       document.querySelector('.message').textContent = '📉 Too Hight';
-//       score--;
-//       document.querySelector('.score').textContent = score;
-//     } else {
-//       document.querySelector('.message').textContent = 'You Lost the game ';
-//       document.querySelector('.score').textContent = 0;
-//     }
-
-//     // When guess is too Low
-//   } else if (guess < secretNumber) {
-//     if (score > 1) {
-//       document.querySelector('.message').textContent = '📈 Too Low ';
-//       score--;
-//       document.querySelector('.score').textContent = score;
-//     } else {
-//       document.querySelector('.message').textContent = 'You Lost the game ';
-//       document.querySelector('.score').textContent = 0;
-//     }
-//   }
+    // When guess is wrong
+  } else if (guess !== secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent =
+        guess > secretNumber ? '📉 Too Hight' : '📈 Too Low ';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = 'You Lost the game ';
+      document.querySelector('.score').textContent = 0;
+    }
+  }
 });
