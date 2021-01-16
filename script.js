@@ -1,25 +1,26 @@
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-
-
+let score = 20;
+let hightScore = 0;
 
 //  Play Again
 document.querySelector('.again').addEventListener('click', function () {
-    score = 20;
-    secretNumber = Math.trunc(Math.random() * 20) + 1;
-    document.querySelector('.message').textContent = 'Start guessing...';
-    document.querySelector('.score').textContent = score;
-    document.querySelector('.number').textContent = '?';
-    document.querySelector('.guess').value = '';
-    document.querySelector('body').style.backgroundColor = '#222';
-    document.querySelector('.number').style.width = '15rem;';
-  });
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem;';
+});
 
 // Click Button
 document.querySelector('.check').addEventListener('click', function () {
-    const guess = Number(document.querySelector('.guess').value);
-    console.log(guess, typeof guess);
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
 
-    //when there"s no Input
+  //when there"s no Input
   if (!guess) {
     document.querySelector('.message').textContent = '⛔ No Number';
 
@@ -47,7 +48,6 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('.message').textContent = 'You Lost the game ';
         document.querySelector('.score').textContent = 0;
       }
-
     }
 
     // When guess is too Hight
