@@ -26,7 +26,6 @@ document.querySelector('.check').addEventListener('click', function () {
 
   //when there"s no Input
   if (!guess) {
-    document.querySelector('.message').textContent = '⛔ No Number';
     displayMessage('⛔ No Number');
 
     //when the players win
